@@ -1,0 +1,16 @@
+<%- include("../partials/header.ejs") %>
+<body>
+	<div class="container">
+		<h1 class="display-5">POST ID: <%= car.id%></h1>
+		<div class="card mb-3">
+			  <img src="<%= car.img%>" class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title"><%=car.manufacturer%> - <%= car.brand%> </h5>
+				<p class="card-text"><%= car.description%></p>
+			  </div>
+		</div>
+		<a class="btn btn-primary mb-5" href="/cars">BACK TO CARS</a>
+	</div>
+</body>
+
+<%- include("../partials/footer.ejs")%>

@@ -1,0 +1,20 @@
+<%- include("../partials/header.ejs") %>
+<body>
+	<div class="container">
+		<h1>ADD A NEW CAR</h1>
+		<form action="/cars/<%=car.id%>?_method=PATCH" method="POST">
+			<label for="img">Image URL:</label>
+			<input class="form-control" type="text" name="img" id="img" placeholder="Image url" value="<%=car.img%>">
+			<label for="manufacturer">Manufacturer:</label>
+			<input class="form-control" type="text" name="manufacturer" id="manufacturer" placeholder="Car manufacturer" value="<%=car.manufacturer %>">
+			<label for="brand">Brand</label>
+			<input class="form-control" type="text" name="brand" id="brand" placeholder="Car brand" value="<%= car.brand%>">
+			<label for="description">Description</label>
+			<input class="form-control" type="text" name="description" id="description" placeholder="Car description" value="<%= car.description %>">
+			<button class="btn btn-info mt-3">Submit</button>
+		</form>
+		<a class="btn btn-warning mt-2" href="/cars">Go back to cars</a>
+	</div>
+</body>
+
+<%- include("../partials/footer.ejs")%>
